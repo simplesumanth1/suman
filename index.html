@@ -1,0 +1,299 @@
+<html>
+    <head>
+        <title>
+            portfolio.com
+        </title>
+        <style>
+        .navbar{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #fff;
+                padding:15px;
+            }
+            .navbar a{
+                text-decoration: none;
+                
+            
+            
+            }
+            .logo{
+                margin-right: 50px;
+            
+            }
+            .list{
+                list-style:disc;
+                display: flex;
+                gap:25px;
+                font-weight: 900;
+                color:aqua;
+            }
+            #toggler,
+                .navbar label{
+                    display: none;
+        
+            }
+            body{
+                background: url("data:image/jpeg;base64,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");
+                background-size: cover;
+                font-family: cursive;
+                color:white;
+                background-attachment: fixed;
+            }
+            .one{
+                text-transform: capitalize;
+                text-shadow: 50px;
+            }
+            .two{
+                align-content: center;
+                text-align: center;
+            }
+            .three{
+                color:greenyellow;
+            }
+            .four{
+                color:red;
+            }
+            .five{
+                color:aquamarine;
+            }
+            .six{
+                color:white;
+                text-transform: capitalize;
+                text-align: center;
+            }
+            .seven{
+                color:aquamarine;
+            }
+            .nine{
+                color:dodgerblue;
+            }
+            .ten{
+                color:darkmagenta;
+            }
+            .eleven{
+                color:salmon;
+        
+            }
+            .twelve{
+                color:antiquewhite;
+        
+            }
+            .thirteen{
+                color:yellow;
+            }
+            .fourteen{
+                color:cadetblue;
+            }
+            .fifteen{
+                color:chartreuse;
+                text-transform: capitalize;
+            }
+            .sixteen{
+                width:200px;
+                display:block;
+                float: left;
+                border:2px;
+                border-style:hidden;
+                border-color:brown;
+                padding: 30px;
+            }
+            .seventeen{
+                color:aqua;
+            }
+            .eighteen{
+                color:gold;
+                align-items: center;
+               padding: 10px;
+                gap: 10px;
+                align-self: center;
+                align-content: center;
+                text-align: center;
+            }
+            .nineteen{
+                text-transform: capitalize;
+            }
+            .twenty{
+                color:chartreuse;
+                text-transform: capitalize;
+            }
+            .twentytwo{
+                color:aqua;
+            }
+            .twentythree{
+                color:cyan;
+                text-decoration-style:dotted;
+                text-transform: capitalize;
+            }
+            .twentyfour{
+                color:aquamarine;
+                text-transform: capitalize;
+            }
+            .twentyfive{
+                color:gold;
+            }
+            .twentysix{
+                border:100px;
+                border-color: chartreuse;
+                border-style: solid;
+                display:block;
+                align-items: center;
+                align-content: center;
+                box-sizing: border-box
+               
+        
+            }
+            .thirtyseven{
+                text-transform: capitalize;
+            }
+            .thirtyeight{
+                float:left;
+                
+                
+            }
+            .fourty{
+                color:gold;
+            }
+           
+        
+        </style>
+        
+        
+
+
+
+        
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="#" class="logo">LOGO</a>
+            <input type="checkbox" id="toggler">
+            <label for="toggler"><i classs="ri-menu-line"></i></label>
+            <div class="menu"></div>
+            <ul class="list">
+                <li> <a href="#" >Home</a></li>
+                <li> <a href="#" >about</a></li>
+                <li> <a href="#" >contact</a></li>
+            </ul>
+        </nav>
+        
+            <h1 class="one"><marquee>hi every one welcome to my page</marquee></h1><hr><br><br>
+            <h2 class="two">about me</h2><hr><br>
+            <h3 class="three"> my name is <span class="four">sumanth </span>I am from a remote village in anantapur district dharmavaram now i am pursuing my computer science engeneering in <span class="five">VELLORE UNIVERSITY</span></h3><hr><br>
+            <h2 class="six"> now i am here to share all my experiences with you</h2><hr><br>
+            <h1 class="seven"> starting with my family</h1><br>
+            <h3 class="eight"> i have a  beatiful family initially i will introduce my father his name is <span class=nine>Narasimhulu</span> and he is a farmer next i will introduce you my mother her name is <span class="ten">Venkatalakshmi</span> she maintain the work in the home as well as in form (helping to my dad in forming crops next i am going to introduce you prettiest sister <span class="eleven">Shanthi</span> she is my elder sister and she get married she is like an another mother to me all my comfotables lookafter by her and my financial support too next i will introduce my small sister <span class="twelve"> Syamala</span> she is a very active girl she is pursuing her MCA course in <span class="thirteen">Jawaharlal technological university anantapur</span> and she recently got a placement in <span class=fourteen>TECH mahindra as a associate software engeneer</span> and i am very happy with this. and finally me the last one pursuing computer science engeneering in vellore university</h3> <br>
+            <h2 class=" fifteen">little about our forming crops</h2> 
+            <h3> i am introducing you to this because i feel this are all also my family without this the whole universe is not there in our whole village every person do the profession thst is forming the crops and export it to the society and they dont consider thst am i get profit or not they will see the crop what i formed is healthily grown or not and the whole unit is safely reached to the sosiety or not....</h3>
+            <br>
+            <h2>below i am attaching some of my family photos </h2><br>
+            
+            <img src="./eighteen.jpg" alt="family" class="sixteen">
+            <img src="./eighteen.jpg" alt="family" class="sixteen">
+            <img src="./nineteen.jpg" alt="family" class="sixteen">
+            
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>><br><br><hr><hr>
+            <h1 class="seventeen">lets move to the education</h1><br>
+            <h3>i will show my marks in a table wise so that you can undestand clearly</h3>
+            <br>
+            <table border="10" class="eighteen">
+                <tr>
+                    <td>sl.no</td>
+                    <td>college/institute name</td>
+                    <td>class</td>
+                    <td>GPA</td>
+                </tr>
+                <tr>
+                    <td>
+                        1.
+                    </td>
+                    <td>layola high school</td>
+                    <td>10th</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>satya sai institutions</td>
+                    <td>+1,+2</td>
+                    <td>9.6</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>vellore university</td>
+                    <td>engeneering</td>
+                    <td>6.5(expected)</td>
+                </tr>
+            </table><br><hr><hr><br>
+            <h1 class="nineteen">about school</h1>
+            <h3>
+                i done my schooling in <span class="twentyone">layola  high school</span> dharmavaram.i never forget those days.i have an wondeful experience with my school offcourse everystudent have that .my school friends were very nice still whenever i want to talk with friends i call to them because now evrn iam not finding a single person like that to make friendship all are fake people in the society....<br>
+                i wish to tell my staff in our school they are very nice all the staff are easily mimgled with everyone all the staff teach very well i think thats why iam here...<br><br><hr>
+            </h3>
+            <h1 class="twenty">little about college</h1><br>
+            <h3>i done my college life in <span class="twentytwo">satya sai institutions</span> anantapuram ,this clg gave me a lot of knowledge to crack the competition in the society i never forget this  i amalways thankful with my clg thae staff were excellent they are anytime with us even in the nights they stay with us...they are very nice i always respectful with them</h3>
+            <br><hr><hr>
+            <h1 class="twentythree">achievements</h1>
+            <br>
+            <h3>there is no much things to say in achievements ,only achievement i got in school is getting 10 GPA its give me a great pleasure  and in sports our kabaddi team got a prize in common health games we gave a great target to the opposition in that...thats it about achivements..</h3>
+            <br><hr><br>
+            <h1 class="twentyfour">passion</h1>
+            <h3>
+                i have two passions in life<br>1)i am very much inetersted from my 9th class that i strongly fixed to crack <span class="twentyfive">NDA(NATIONAL DEFENCE ACADEMY)</span> any how its not going to happen because iam physically unfit for that that sector i lost a chance to serve my nation due this obstacle...<br>
+                2)then i have changed my decision to the computer science side to achieve something in that sector hope this will happen..
+                
+            </h3><br><hr>
+            <h2>contact with me</h2><br>
+            <forms class="twenty six">
+                <label>name</label> <br>
+                <input type="name" value="enter your name">
+                <br><br>
+                <label>email</label><br>
+                <input type="email" value="enter a valid email" name="email">
+                <br><br>
+                <label>password</label><br>
+                <input type="password" value="" name="password"><br><br>
+                <label>phone number</label><br>
+                <input type="number"  value="mobile number"  name="pnone"><br><br>
+                <select>
+                    <option> select your gender</option>
+                
+                
+                    <option>male</option>
+                    <option>female</option>
+                    <option>transgender</option>
+                </select><br><br>
+                
+                <input type="submit" name="submit">
+                <input type="reset" name="reset">
+                
+            </forms><br><br><hr><hr><br><br><br>
+            
+                <h2 class="thirtyseven">you can also contact with me in</h2><br><br>
+                <div class="thirtyeight">
+                    <a href="#"><img src="./facebooklogo.png" alt="facebook" width="40px"></a>
+                    <a href="#"> <img src="./instagramlogo.jpg" alt="facebook" width="40px">
+                   <a href="#"><img src="./whatsapplogo.jpg" alt="facebook" width="40px"></a><br><br><br>
+                    
+
+
+
+
+                </div><br><br>
+                <h2><marquee class="fourty">have a nice time bye</marquee><br><br><br></h2>
+
+           
+            
+
+
+           
+             
+           
+        
+
+
+
+
+        
+    </body>
+</html>
